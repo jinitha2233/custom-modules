@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Bigeyedeers. All rights reserved.
+ * See COPYING.txt for license details.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+   <system>
+      <tab id="bigeyedeers" translate="label" class="bigeyedeers" sortOrder="100">
+         <label>Bigeyedeers</label>
+      </tab>
+      <section id="inventory_update" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+         <class>separator-top</class>
+         <label>Inventory Update</label>
+         <tab>bigeyedeers</tab>
+         <resource>Bigeyedeers_InventoryUpdate::config</resource>
+         <group id="general" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Cron Configuration</label>
+            <field id="enable_inventory" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+               <label>Cron Enable</label>
+               <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+            </field>
+            <field id="inventory_cron_expression" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                <label>Add Cron Expression (eg : * * * * *)</label>
+                 <comment>(minute hour day(month) month day(week))</comment>
+                <depends> <!-- This field will only be visible if the field with the id enable_inventory is set to value 1 -->
+                        <field id="enable_inventory">1</field>
+                </depends>
+            </field>
+         </group>
+      </section>
+   </system>
+</config>
