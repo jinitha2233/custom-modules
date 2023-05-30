@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Bigeyedeers, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="bigeyedeers_checkoutmessage" resource="default" engine="innodb" comment="Bigeyedeers Checkout Message Table">
+		<column xsi:type="smallint" name="id" padding="6" unsigned="true" nullable="false" identity="true" comment="Message Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="id"/>
+		</constraint>
+		<column name="message" nullable="true" xsi:type="varchar" comment="Message" length="255"/>
+		<column name="status" nullable="true" xsi:type="int" comment="Status" identity="false" unsigned="true"/>
+	</table>
+</schema>

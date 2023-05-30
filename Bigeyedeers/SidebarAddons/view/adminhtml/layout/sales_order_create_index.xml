@@ -1,0 +1,10 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="sidebar">
+            <block class="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\CrossSells" template="Magento_Sales::order/create/sidebar/items.phtml" name="bigeyedeers.sidebar.addons.crosssells" before="-"/>
+            <block class="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\UpSells" template="Magento_Sales::order/create/sidebar/items.phtml" name="bigeyedeers.sidebar.addons.upsells" after="bigeyedeers.sidebar.addons.crosssells"/>
+            <block class="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\RelatedProducts" template="Magento_Sales::order/create/sidebar/items.phtml" name="bigeyedeers.sidebar.addons.relatedproducts" before="bigeyedeers.sidebar.addons.upsells"/>
+            <block class="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\Addons" template="Magento_Sales::order/create/sidebar/items.phtml" name="bigeyedeers.sidebar.addons.addons" after="bigeyedeers.sidebar.addons.upsells"/>
+        </referenceBlock>
+    </body>
+</page>

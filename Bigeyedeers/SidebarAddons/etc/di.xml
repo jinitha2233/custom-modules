@@ -1,0 +1,26 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\CrossSells" type="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\Sidebar">
+        <arguments>
+            <argument name="linkKey" xsi:type="string">cross_sell_products</argument>
+            <argument name="headerText" xsi:type="string">Cross Sells</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\UpSells" type="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\Sidebar">
+        <arguments>
+            <argument name="linkKey" xsi:type="string">up_sell_products</argument>
+            <argument name="headerText" xsi:type="string">UpSells</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\RelatedProducts" type="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\Sidebar">
+        <arguments>
+            <argument name="linkKey" xsi:type="string">related_products</argument>
+            <argument name="headerText" xsi:type="string">Related Products</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\Addons" type="Bigeyedeers\SidebarAddons\Block\Adminhtml\Sales\Order\Sidebar">
+        <arguments>
+            <argument name="linkKey" xsi:type="string">addons</argument>
+            <argument name="headerText" xsi:type="string">Addon Products</argument>
+        </arguments>
+    </virtualType>
+</config>

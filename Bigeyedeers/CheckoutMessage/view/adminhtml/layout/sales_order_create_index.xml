@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Bigeyedeers, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="sales_order_create_customer_block"/>
+    <head>
+        <css src="Bigeyedeers_CheckoutMessage::css/checkoutmessage.css"/>
+    </head>
+    <body>
+        <referenceContainer name="js">
+            <block class="Bigeyedeers\CheckoutMessage\Block\Adminhtml\Order\Create\CheckoutMessage" template="Bigeyedeers_CheckoutMessage::order/create/checkoutmessage.phtml" name="checkout_message" after="create"/>
+        </referenceContainer>
+    </body>
+</page>

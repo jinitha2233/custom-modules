@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="bigeyedeers_skunotifications" resource="default" engine="innodb" comment="Bigeyedeers Sku Notifications Table">
+		<column xsi:type="smallint" name="id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="id"/>
+		</constraint>
+		<column name="title" nullable="true" xsi:type="varchar" comment="Title" length="255"/>
+		<column name="status" nullable="true" xsi:type="int" comment="Status" identity="false" unsigned="true"/>
+		<column name="content" nullable="true" xsi:type="text" comment="Content"/>
+		<column name="sku" nullable="true" xsi:type="varchar" comment="Sku" length="255"/>
+		<column name="every_sku" nullable="true" xsi:type="varchar" comment="Every Sku" length="255"/>
+	</table>
+</schema>

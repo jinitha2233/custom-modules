@@ -1,0 +1,14 @@
+{
+    "bigeyedeers_skunotifications": {
+        "column": {
+            "id": true,
+            "title": true,
+            "status": true,
+            "content": true,
+            "sku": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Bigeyedeers, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Bigeyedeers\CheckoutMessage\Api\CheckoutMessageRepositoryInterface" type="Bigeyedeers\CheckoutMessage\Model\CheckoutMessageRepository"/>
+    <preference for="Bigeyedeers\CheckoutMessage\Api\Data\CheckoutMessageInterface" type="Bigeyedeers\CheckoutMessage\Model\Data\CheckoutMessage"/>
+    <preference for="Bigeyedeers\CheckoutMessage\Api\Data\CheckoutMessageSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="bigeyedeers_checkoutmessage_checkoutmessage_listing_data_source" xsi:type="string">Bigeyedeers\CheckoutMessage\Model\ResourceModel\CheckoutMessage\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Bigeyedeers\CheckoutMessage\Model\ResourceModel\CheckoutMessage\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">bigeyedeers_checkoutmessage</argument>
+            <argument name="resourceModel" xsi:type="string">Bigeyedeers\CheckoutMessage\Model\ResourceModel\CheckoutMessage</argument>
+        </arguments>
+    </virtualType>
+</config>

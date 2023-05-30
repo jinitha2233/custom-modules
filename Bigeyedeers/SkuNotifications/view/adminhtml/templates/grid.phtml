@@ -1,0 +1,40 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate
+?>
+<?php
+/**
+ * @var $block \Bigeyedeers\SkuNotifications\Block\Adminhtml\Order\Create\Items\Grid
+ */
+?>
+<?php
+    $arrayMessageError = (array) $block->getSkuNotifications();
+    $skuMessages = '';
+?>
+
+<?php if(count($arrayMessageError) > 0):?>
+    <?php foreach($arrayMessageError as $key => $message) {
+        $skuMessages .= '<li>"'.$key.'"'." : ".'"'.trim(preg_replace('/\s\s+/', ' ', $message)).'"'."</li>";
+    }
+?>
+
+<!-- SKU notification popup modal start -->
+<div id="sku-popup-modal" style="display: none">
+    <div class="modal-content">
+        <ul class="sku-messages">
+            <?php echo($skuMessages)?>
+        </ul>
+    </div>
+</div>
+
+<script>
+    require(['jquery', 'skunotifications'], function($, skunotifications) {
+        custom();
+    });
+</script>
+<!-- SKU notification popup modal end -->
+<?php endif; ?>

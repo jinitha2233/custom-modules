@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Bigeyedeers, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Bigeyedeers_CheckoutMessage::bigeyedeers_checkoutmessage_checkoutmessage" title="Checkout Messages" module="Bigeyedeers_CheckoutMessage" sortOrder="10" action="bigeyedeers_checkoutmessage/checkoutmessage/index" resource="Magento_Backend::content" parent="Bigeyedeers_SkuNotifications::top_menu"/>
+    </menu>
+</config>

@@ -1,0 +1,32 @@
+<?php
+/**
+ * @var $block \Bigeyedeers\CheckoutMessage\Block\Adminhtml\Order\Create\CheckoutMessage
+ */
+$messages = array(0);
+$messages = $block->getCheckoutMessages();
+if(count($messages)>0):
+?>
+
+<div id="checkout-popup-modal" style="display: none">
+    <ul>
+        <?php
+
+        // replace bold and ital
+        $searchVal = array("[b]", "[/b]", "[i]", "[/i]");
+        $replaceVal = array("<strong>", "</strong>", "<em>", "</em>");
+        foreach ($messages as $mess) {
+            $mess = str_replace($searchVal, $replaceVal, $mess['message']);
+            echo "<li>".$mess."</li>";
+        }
+        ?>
+    </ul>
+</div>
+
+<script>
+    require([
+        "prototype",
+        "Bigeyedeers_CheckoutMessage/js/order/create/scripts"
+    ], function(){
+    });
+</script>
+<?php endif;?>

@@ -1,0 +1,12 @@
+{
+    "bigeyedeers_checkoutmessage": {
+        "column": {
+            "id": true,
+            "message": true,
+            "status": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@bgcolor: #81c784;
+@textcolor: #fff;
+.modal-popup.sku-notification {
+  .modal-inner-wrap {
+    .modal-header {
+      padding-top: 50px;
+    }
+    max-width: 700px;
+    transform: translateY(-50%);
+    top: 50%;
+    .modal-content {
+      ul.sku-messages {
+        margin-top: 10px;
+        padding-left: 40px;
+        list-style: disc;
+        li {
+          line-height: 1.2;
+          padding: 4px 0 6px 0;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+    .modal-footer{
+      text-align: center;
+      button {
+        text-align: center;
+        width: 20%;
+        color: @textcolor;
+        background: @bgcolor;
+      }
+    }
+  }
+} 

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Bigeyedeers\SkuNotifications\Api\SkuNotificationsRepositoryInterface" type="Bigeyedeers\SkuNotifications\Model\SkuNotificationsRepository"/>
+	<preference for="Bigeyedeers\SkuNotifications\Api\Data\SkuNotificationsInterface" type="Bigeyedeers\SkuNotifications\Model\Data\SkuNotifications"/>
+	<preference for="Bigeyedeers\SkuNotifications\Api\Data\SkuNotificationsSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Bigeyedeers\SkuNotifications\Model\ResourceModel\SkuNotifications\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">bigeyedeers_skunotifications</argument>
+			<argument name="resourceModel" xsi:type="string">Bigeyedeers\SkuNotifications\Model\ResourceModel\SkuNotifications\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="bigeyedeers_skunotifications_skunotifications_listing_data_source" xsi:type="string">Bigeyedeers\SkuNotifications\Model\ResourceModel\SkuNotifications\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>
